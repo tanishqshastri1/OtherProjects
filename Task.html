@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Description" content="This is an awesome website.">
+        <title>Redbird's Website</title>
+    </head>
+    <style>
+        .body{
+            background-color: #fff;
+        }
+        button{
+            background-color: chartreuse;
+            padding: 10px 30px;
+            border-radius: 10px;
+        }
+    </style>
+    <body id="body">
+        <header>
+            
+                <div class="topnav">
+                    <a class="active" href="#home">Home</a>
+                    <a href="#contact" onclick="myFunction1()">Contact</a>
+                    <script>
+                        function myFunction1() {alert("Gmail: tanishqshastri2002@gmail.com | Contact no.: +91 9668234851");}
+                    </script>
+                    <style>
+                                    .topnav {
+                                background-color: rgb(197, 230, 12);
+                                overflow: hidden;
+                            }
+                            
+                            
+                            .topnav a {
+                                float: left;
+                                color:rgb(31, 31, 176);
+                                text-align: center;
+                                padding: 14px 16px;
+                                text-decoration: none;
+                                font-size: 17px;
+                            }
+                            
+                            
+                            .topnav a:hover {
+                                background-color: rgb(176, 12, 138);
+                                color: black;
+                            }
+                            
+                            
+                            .topnav a.active {
+                                background-color: #cb4e2b;
+                                color: white;
+                            }
+                    </style>
+                </div>
+            
+            <button onclick="myFunction()" style="background-color:beige; color:darkgreen;">Surprise :)</button>
+            <script>
+                function myFunction() {alert("Welcome to my first ever website!");}
+            </script>
+
+            <h2 style="text-align:center;" id="heading"><u>RANDOM FACTS (TO WASTE YOUR TIME)</u></h2>
+        </header>
+        <div style="text-align: right;">
+            <p id="dateTime">
+                
+            </p>
+        </div>
+        <main>
+            <p>
+                1. Veg biryani is not actually biryani. It's just pulao. |
+                2. Climate change is making spiders bigger. |
+                3. Sonic the Hedgehog's full name is Ogilvie Maurice Hedgehog. |
+                4. There is a McDonalds in every continent except Antarctica. |
+                5. Small intestine is bigger than the large intestine. |
+                6. Dogs like squeaky toys because they mimic the screams of their prey. |
+                7. Buzz Aldrin was the first man to wee on moon's surface. "One giant leak for mankind!" were the words that came out from his mouth while relieving himself.
+            </p>
+        </main>
+        <div>
+           
+        </div>
+        <footer>
+            <button onclick="changeColour()">Change Background</button>      
+            <button onclick="changeHeading()">Change Heading</button>
+            <script>
+                function getRandomColor() {
+                    var letters = '0123456789ABCDEF';
+                    var color = '#';
+                    for (var i = 0; i < 6; i++) {
+                        color += letters[Math.floor(Math.random() * 16)];
+                    }
+                    return color;
+                }
+                function changeColour() {
+                  document.getElementById('body').style.cssText = 'background-color:'+ getRandomColor()  +'; color:' + getRandomColor();
+                }
+                function changeHeading() {
+                  document.getElementById('heading').innerHTML = 'Magic!'; 
+                }
+                window.onload= function displayCurrentDateTime(){
+                    document.getElementById('dateTime').innerHTML = new Date();
+                }
+            </script>
+        
+            <div class="footer">
+                <a href="https://www.nitrkl.ac.in/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/e/e2/NIT_Rourkela_Colour_Logo.svg" width="125" height="125" align="left"> 
+                </a>
+                
+                <p>
+                    National Institute of Technology</br>
+                    Rourkela, Odisha, India, 769008</br>
+                    registrar@nitrkl.ac.in</br>
+                    www.nitrkl.ac.in</br>
+                </p>
+            </div>
+            <style>
+                .footer {
+                  position: fixed;
+                  left: 0;
+                  bottom: 0;
+                  width: 100%;
+                  background-color: rgb(205, 224, 108);
+                  color: rgb(14, 3, 3);
+                  text-align: center;
+                }
+                </style>
+        </footer>       
+
+    </body>
+   
+</html>
